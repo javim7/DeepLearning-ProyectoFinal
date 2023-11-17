@@ -135,4 +135,4 @@ if __name__ == "__main__":
             tabla_predicciones = tabla_predicciones.sort_values(by='Puntos', ascending=False)
 
             # Guardar la tabla de predicciones en un archivo
-            tabla_predicciones.to_csv(f'predicciones/jornadasPred/{jornada}.csv', index=False)
+            tabla_predicciones.to_csv(f'predicciones/jornadasPred4/{jornada}.csv', index=False)

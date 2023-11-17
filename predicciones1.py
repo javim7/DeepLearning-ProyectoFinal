@@ -14,10 +14,13 @@ def obtener_h2h(dataModel, homeTeam, awayTeam):
 
     # Obtener el último partido
     ultimo_partido = partidos.iloc[-1]
-    print('ultimo partido: ', ultimo_partido)
+    # print('ultimo partido: ', ultimo_partido)
 
-    # Devolver las victorias históricas de cada equipo
-    return ultimo_partido['HHHW'], ultimo_partido['HHAW']
+    # Devolver las victorias históricas de cada equipo en el orden correcto
+    if ultimo_partido['HomeTeam'] == homeTeam:
+        return ultimo_partido['HHHW'], ultimo_partido['HHAW']
+    else:
+        return ultimo_partido['HHAW'], ultimo_partido['HHHW']
 
 def preparar_datos(jornada, partido, tabla, dataModel):
     # Obtener el Home y AwayTeam
