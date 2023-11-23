@@ -4,7 +4,6 @@ import pandas as pd
 from keras.models import load_model
 
 def obtener_h2h(dataModel, homeTeam, awayTeam):
-
     # Filtrar los partidos donde los equipos son los mismos
     partidos = dataModel[((dataModel['HomeTeam'] == homeTeam) & (dataModel['AwayTeam'] == awayTeam)) | ((dataModel['HomeTeam'] == awayTeam) & (dataModel['AwayTeam'] == homeTeam))]
 
